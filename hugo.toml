@@ -1,0 +1,50 @@
+title = "Wattleworks"
+theme = "wattleworks"
+baseURL = "https://wattleworks.org"
+copyright = "© Stephen Malone 2025."
+languageCode = "en-us"
+timeZone = "Australia/Brisbane"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[pagination]
+disableAliases = false
+pagerSize = 10
+path = "page"
+
+[params]
+description = "A journal of urban Australian haiku by Stephen Malone."
+
+footer = """
+© Stephen Malone 2025. Powered by [Hugo](https://gohugo.io).
+"""
+
+navigation = [
+    [
+        "about",
+        "/pages/about/",
+    ],
+    [
+        "posts",
+        "/posts/",
+    ],
+    [
+        "bluesky",
+        "https://bsky.app/profile/wattleworks.bsky.social",
+    ],
+    [
+        "email",
+        "mailto:mail@wattleworks.org",
+    ],
+]
+
+[params.author]
+name = "Stephen Malone"
+email = "mail@wattleworks.org"
+
+[permalinks]
+tag = "/tag/:slug/"
+
+[taxonomies]
+tag = "tags"

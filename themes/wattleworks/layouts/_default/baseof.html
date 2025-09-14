@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>
+            {{ site.Title }} · {{ block "name" . }} {{ end }}
+        </title>
+        <link rel="canonical" href="{{ .Permalink }}">
+        <meta name="color-scheme" content="light dark">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ site.Params.Description | safeHTML }}">
+
+        {{ range resources.Match "fonts/*.woff2" }}
+            {{ .Publish }}
+        {{ end }}
+
+        {{ with resources.Match "scss/*.scss" | resources.Concat "style.css" | toCSS | minify | fingerprint }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}">
+        {{ end }}
+
+        {{ with .OutputFormats.Get "rss" }}
+            <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="RSS Feed">
+        {{ end }}
+
+        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <meta name="apple-mobile-web-app-title" content="wattleworks.org">
+
+        <meta property="og:site_name" content="{{ site.Title }}">
+        <meta property="og:title" content="{{ .Title }}">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="{{ .Permalink }}">
+
+        {{ site.Params.analytics | safeHTML }}
+    </head>
+
+    <body id="site">
+        <header id="site-header">
+            <h1 id="site-header-title">
+                <a href="/">{{ site.Title }}</a>
+            </h1>
+
+            <nav id="site-header-navigation">
+                <ul>
+                    {{ range site.Params.navigation }}
+                        <li>
+                            <a href="{{ index . 1 }}">{{ index . 0 }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
+            </nav>
+        </header>
+
+        <main id="site-body">
+            {{ block "main" . }} {{ end }}
+        </main>
+
+        <footer id="site-footer">
+            <p> {{ site.Params.footer | markdownify }} </p>
+        </footer>
+    </body>
+</html>
