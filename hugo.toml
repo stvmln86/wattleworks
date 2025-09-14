@@ -21,7 +21,6 @@ footer = """
 """
 
 navigation = [
-    ["home",    "/"],
     ["about",   "/pages/about/"],
     ["posts",   "/posts/"],
     ["bluesky", "https://bsky.app/profile/wattleworks.bsky.social"],
