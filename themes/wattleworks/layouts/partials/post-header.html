@@ -1,10 +1,10 @@
-<hgroup class="post-header">
-    <h2 class="post-header-title">
+<hgroup>
+    <h2>
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </h2>
 
     {{ if eq .Type "posts" }}
-        <p class="post-header-metadata">
+        <p>
             <span> {{ .Date.Format "Monday 2 January 2006" }}. </span>
             <span>
                 {{ range .Params.tags }}
