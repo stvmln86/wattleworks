@@ -13,4 +13,4 @@ appears at my door.
 
 <!--more-->
 
-Hello little birdies and welcome to [Wattleworks](/).
+Hello little birdies, and welcome to [Wattleworks](/).

@@ -21,22 +21,11 @@ footer = """
 """
 
 navigation = [
-    [
-        "about",
-        "/pages/about/",
-    ],
-    [
-        "posts",
-        "/posts/",
-    ],
-    [
-        "bluesky",
-        "https://bsky.app/profile/wattleworks.bsky.social",
-    ],
-    [
-        "email",
-        "mailto:mail@wattleworks.org",
-    ],
+    ["home",    "/"],
+    ["about",   "/pages/about/"],
+    ["posts",   "/posts/"],
+    ["bluesky", "https://bsky.app/profile/wattleworks.bsky.social"],
+    ["email",   "mailto:mail@wattleworks.org"],
 ]
 
 [params.author]
