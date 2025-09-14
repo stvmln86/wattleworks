@@ -1,10 +1,13 @@
 :root {
-    --main-back: light-dark(#fff, #222);
-    --main-text: light-dark(#333, #eee);
-    --line-bord: light-dark(#ccc, #444);
-    --text-grey: light-dark(#888, #888);
-    --link-blue: light-dark(#05a, #05a);
-    --link-purp: light-dark(#74a, #74a);
+    --main-back: #faf7f2;
+    --line-bord: #d4c4a8;
+    --text-main: #3c2e26;
+    --text-meta: #8b7355;
+    --link-norm: #5d4e37;
+    --link-vstd: #704214;
+    --link-norm-line: rgba(93, 78, 55, 0.3);
+    --link-vstd-line: rgba(112, 66, 20, 0.3);
+    --poem-back: rgba(212, 196, 168, 0.1);
 }
 
 html,
@@ -18,18 +21,26 @@ code {
 
 body {
     background-color: var(--main-back);
-    color: var(--main-text);
+    color: var(--text-main);
     margin: 1rem auto;
     max-width: 600px;
     padding: 0 1rem;
 
     a {
         &:link {
-            color: var(--link-blue);
+            color: var(--link-norm);
+            text-decoration: underline;
+            text-decoration-color: var(--link-norm-line);
+            text-underline-offset: 0.2rem;
         }
 
         &:visited {
-            color: var(--link-purp);
+            color: var(--link-vstd);
+            text-decoration-color: var(--link-vstd-line);
+        }
+
+        &:hover {
+            text-decoration-color: var(--text-main);
         }
     }
 
@@ -45,6 +56,7 @@ header {
 
     h1 {
         font-weight: 900;
+        margin: 0;
     }
 
     nav ul {
@@ -57,35 +69,36 @@ header {
 }
 
 article {
+    border-top: 0.125rem solid var(--line-bord);
+    border-bottom: 0.125rem solid var(--line-bord);
     text-align: justify;
 
-    hgroup p {
-        color: var(--text-grey);
+    hgroup {
+        p {
+            color: var(--text-meta);
+            font-size: 0.9rem;
+
+            span + span::before {
+                content: " • ";
+                color: var(--line-bord);
+            }
+        }
     }
 
     pre {
-        border-left: 0.125rem solid var(--line-bord);
+        border-left: 0.25rem solid var(--line-bord);
+        background-color: var(--poem-back);
         padding: 1rem;
     }
 
     ul span {
-        color: var(--text-grey);
+        color: var(--text-meta);
+        float: right;
     }
 }
 
 footer {
-    color: var(--text-grey);
+    color: var(--text-meta);
     text-align: center;
+    font-size: 0.875rem;
 }
-
-/* .pagination ul {
-    column-gap: 1rem;
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 2rem auto;
-
-    .page-item {
-        padding: 0.5rem 1rem;
-    }
-} */
