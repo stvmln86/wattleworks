@@ -1,13 +1,14 @@
 :root {
-    --main-back: #faf7f2;
-    --line-bord: #d4c4a8;
-    --text-main: #3c2e26;
-    --text-meta: #8b7355;
-    --link-norm: #5d4e37;
-    --link-vstd: #704214;
-    --link-norm-line: rgba(93, 78, 55, 0.3);
-    --link-vstd-line: rgba(112, 66, 20, 0.3);
-    --poem-back: rgba(212, 196, 168, 0.1);
+    --main-back: #fff;
+    --main-fore: #333;
+
+    --link-text: #544;
+    --link-deco-norm: #bcd;
+    --link-deco-vstd: #cbd;
+
+    --tone-back: #fdf9f5;
+    --tone-fore: #877;
+    --tone-line: #cba;
 }
 
 html,
@@ -21,26 +22,27 @@ code {
 
 body {
     background-color: var(--main-back);
-    color: var(--text-main);
+    color: var(--main-fore);
     margin: 1rem auto;
     max-width: 600px;
     padding: 0 1rem;
 
     a {
+        text-decoration: underline;
+        text-underline-offset: 0.125rem;
+
         &:link {
-            color: var(--link-norm);
-            text-decoration: underline;
-            text-decoration-color: var(--link-norm-line);
-            text-underline-offset: 0.2rem;
+            color: var(--link-text);
+            text-decoration-color: var(--link-deco-norm);
         }
 
         &:visited {
-            color: var(--link-vstd);
-            text-decoration-color: var(--link-vstd-line);
+            color: var(--link-text);
+            text-decoration-color: var(--link-deco-vstd);
         }
 
         &:hover {
-            text-decoration-color: var(--text-main);
+            text-decoration-color: currentColor;
         }
     }
 
@@ -69,36 +71,33 @@ header {
 }
 
 article {
-    border-top: 0.125rem solid var(--line-bord);
-    border-bottom: 0.125rem solid var(--line-bord);
+    border-top: 0.125rem solid var(--tone-line);
+    border-bottom: 0.125rem solid var(--tone-line);
     text-align: justify;
 
     hgroup {
         p {
-            color: var(--text-meta);
-            font-size: 0.9rem;
+            color: var(--tone-fore);
 
             span + span::before {
                 content: " • ";
-                color: var(--line-bord);
             }
         }
     }
 
     pre {
-        border-left: 0.25rem solid var(--line-bord);
-        background-color: var(--poem-back);
+        border-left: 0.25rem solid var(--tone-line);
+        background-color: var(--tone-back);
         padding: 1rem;
     }
 
     ul span {
-        color: var(--text-meta);
+        color: var(--tone-fore);
         float: right;
     }
 }
 
 footer {
-    color: var(--text-meta);
+    color: var(--tone-fore);
     text-align: center;
-    font-size: 0.875rem;
 }

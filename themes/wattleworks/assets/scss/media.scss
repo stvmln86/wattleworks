@@ -3,18 +3,11 @@
         display: none;
     }
 
-    article hgroup {
-        p {
-            color: var(--text-meta);
-            font-size: 0.9rem;
+    article hgroup p span + span {
+        display: block;
 
-            span + span {
-                display: block;
-
-                &::before {
-                    content: "";
-                }
-            }
+        &::before {
+            content: "";
         }
     }
 }
