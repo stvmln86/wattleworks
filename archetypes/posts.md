@@ -1,6 +1,6 @@
 ---
 title: {{ .Name | title }}
-date: {{ split .Date "T" | first }}
+date: {{ index (split .Date "T") 0 }}
 tags: [untagged] # season, subject, colour.
 ---
 
