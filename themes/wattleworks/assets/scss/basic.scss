@@ -9,7 +9,6 @@
     --tone-back: light-dark(#fdf8f4, #2a2420);
     --tone-fore: light-dark(#877, #baa);
     --tone-line: light-dark(#cba, #655);
-    --menu-flip: light-dark(var(--main-back), var(--main-fore));
 }
 
 html,
@@ -34,12 +33,10 @@ body {
         text-underline-offset: 0.125rem;
 
         &:link {
-            color: var(--link-text);
             text-decoration-color: var(--link-deco-norm);
         }
 
         &:visited {
-            color: var(--link-text);
             text-decoration-color: var(--link-deco-vstd);
         }
 
@@ -63,35 +60,27 @@ header {
         margin: 0;
     }
 
-    nav {
-        ul {
-            list-style-type: none;
-            column-gap: 0.25rem;
-            display: flex;
-            justify-content: space-between;
-            padding-left: 0;
+    nav ul {
+        column-gap: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding-left: 0;
 
-            li {
-                background-color: var(--tone-back);
-                flex: 1;
+        a {
+            display: block;
+        }
 
-                &:first-child {
-                    border-left: 0.25rem solid var(--tone-line);
-                }
+        li {
+            background-color: var(--tone-back);
+            flex: 1;
 
-                &:last-child {
-                    border-right: 0.25rem solid var(--tone-line);
-                }
-
-                &:hover {
-                    background: var(--tone-line);
-                    color: var(--menu-flip);
-                }
+            &:first-child {
+                border-left: 0.25rem solid var(--tone-line);
             }
 
-            a {
-                display: block;
-                padding: 0.125rem 0;
+            &:last-child {
+                border-right: 0.25rem solid var(--tone-line);
             }
         }
     }
@@ -100,17 +89,8 @@ header {
 article {
     text-align: justify;
 
-    /* + article::before {
-        content: "• • •";
-        display: block;
-        text-align: center;
-        color: var(--tone-line);
-    } */
-
     hgroup {
-        p {
-            color: var(--tone-fore);
-        }
+        color: var(--tone-fore);
 
         span:last-child::before {
             content: " · ";
@@ -125,15 +105,9 @@ article {
         padding: 1rem;
     }
 
-    ul {
-        a + span,
-        a + span + span {
-            float: right;
-        }
-
-        span {
-            color: var(--tone-fore);
-        }
+    ul span {
+        color: var(--tone-fore);
+        float: right;
     }
 }
 
