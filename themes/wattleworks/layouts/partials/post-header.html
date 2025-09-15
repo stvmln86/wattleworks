@@ -5,10 +5,17 @@
 
     {{ if eq .Type "posts" }}
         <p>
-            <span> {{ .Date.Format "Monday 2 January 2006" }} </span>
+            <span class="desktop">
+                {{ .Date.Format "Monday 2 January 2006" }}
+            </span>
+
+            <span class="mobile">
+                {{ .Date.Format "Mon 2 Jan 2006" }}
+            </span>
+
             <span>
                 {{ range .Params.tags }}
-                    <a href="/tags/{{ . | urlize }}">#{{ . | urlize }}</a>
+                    <a href="/tags/{{ . | urlize }}/">#{{ . | urlize }}</a>
                 {{ end }}
             </span>
         </p>

@@ -78,16 +78,17 @@ article {
     hgroup {
         p {
             color: var(--tone-fore);
+        }
 
-            span + span::before {
-                content: " • ";
-            }
+        span:last-child::before {
+            content: " · ";
         }
     }
 
     pre {
         border-left: 0.25rem solid var(--tone-line);
         background-color: var(--tone-back);
+        line-height: 1.8rem;
         padding: 1rem;
     }
 

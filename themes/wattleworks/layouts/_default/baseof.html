@@ -34,7 +34,6 @@
 
             <nav>
                 <ul>
-                    <li> <a class="desktop" href="/">home</a> </li>
                     {{ range site.Params.navigation }}
                         <li>
                             <a href="{{ index . 1 }}">{{ index . 0 }}</a>
