@@ -2,14 +2,14 @@
     <ul>
         {{ with .PrevInSection }}
             <li>
-                <span>Previous:</span>
+                Previous:
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
         {{ end }}
 
         {{ with .NextInSection }}
             <li>
-                <span>Next:</span>
+                Next:
                 <a href="{{ .RelPermalink }}">{{ .Title }}</a>
             </li>
         {{ end }}
