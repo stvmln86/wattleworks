@@ -25,7 +25,13 @@
                     {{ range .Pages }}
                         <li>
                             <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                            <span> {{ .Date.Format "2 January 2006" }} </span>
+                            <span class="desktop">
+                                {{ .Date.Format "2 January 2006" }}
+                            </span>
+
+                            <span class="mobile">
+                                {{ .Date.Format "2 Jan 2006" }}
+                            </span>
                         </li>
                     {{ end }}
                 </ul>
