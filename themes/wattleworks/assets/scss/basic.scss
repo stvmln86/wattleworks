@@ -100,9 +100,14 @@ article {
         padding: 1rem;
     }
 
-    ul span {
-        color: var(--tone-fore);
-        float: right;
+    ul {
+        a + span {
+            float: right;
+        }
+
+        span {
+            color: var(--tone-fore);
+        }
     }
 }
 
