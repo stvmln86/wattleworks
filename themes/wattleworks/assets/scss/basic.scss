@@ -71,8 +71,8 @@ header {
 }
 
 article {
-    border-top: 0.125rem solid var(--tone-line);
     border-bottom: 0.125rem solid var(--tone-line);
+    border-top: 0.125rem solid var(--tone-line);
     text-align: justify;
 
     hgroup {
@@ -86,8 +86,8 @@ article {
     }
 
     pre {
-        border-left: 0.25rem solid var(--tone-line);
         background-color: var(--tone-back);
+        border-left: 0.25rem solid var(--tone-line);
         line-height: 1.8rem;
         padding: 1rem;
     }
