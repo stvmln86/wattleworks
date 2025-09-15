@@ -1,8 +1,8 @@
-+++
-title = "Ascent"
-date = "2025-09-17"
-tags = ["spring", "insects", "brown"]
-+++
+---
+title: Ascent
+date: 2025-09-17
+tags: [spring, insects, brown]
+---
 
 ```
 seven termites

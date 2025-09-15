@@ -1,8 +1,8 @@
-+++
-title = "Openings"
-date = "2025-09-15"
-tags = ["spring", "bird", "black"]
-+++
+---
+title: Openings
+date: 2025-09-15
+tags: [spring, bird, black]
+---
 
 ```
 a single magpie

@@ -1,5 +1,5 @@
-+++
-title = "{{ .Name | title }}"
-+++
+---
+title: {{ .Name | title }}
+---
 
 Content.

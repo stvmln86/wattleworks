@@ -1,8 +1,8 @@
-+++
-title = "{{ .Name | title }}"
-date = "{{ .Date }}"
-tags = ["untagged"] # season, subject, colour.
-+++
+---
+title: {{ .Name | title }}
+date: {{ split .Date "T" | first }}
+tags: [untagged] # season, subject, colour.
+---
 
 ```
 Haiku.
