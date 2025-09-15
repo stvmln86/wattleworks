@@ -1,7 +1,6 @@
 +++
 title = "Openings"
 date = "2025-09-15"
-slug = "openings"
 tags = ["spring", "bird", "black"]
 +++
 
