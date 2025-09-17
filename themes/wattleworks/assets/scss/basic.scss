@@ -9,6 +9,9 @@
     --tone-back: light-dark(#fdf8f4, #2a2420);
     --tone-fore: light-dark(#877, #baa);
     --tone-line: light-dark(#cba, #655);
+
+    --border-radius: 0.5rem;
+    --border-width: 0.125rem;
 }
 
 html,
@@ -30,7 +33,7 @@ body {
     a {
         color: var(--link-text);
         text-decoration: underline;
-        text-underline-offset: 0.125rem;
+        text-underline-offset: var(--border-width);
 
         &:link {
             text-decoration-color: var(--link-deco-norm);
@@ -61,7 +64,7 @@ header {
     }
 
     nav ul {
-        column-gap: 0.25rem;
+        column-gap: calc(var(--border-width) * 2);
         display: flex;
         justify-content: space-between;
         list-style-type: none;
@@ -69,22 +72,26 @@ header {
 
         a {
             display: block;
+        }
+
+        a.here {
+            color: var(--tone-fore);
             text-decoration: none;
         }
 
         li {
             background-color: var(--tone-back);
-            border: 0.125rem solid var(--tone-line);
+            border: var(--border-width) solid var(--tone-line);
             flex: 1;
 
             &:first-child {
-                border-top-left-radius: 0.5rem;
-                border-bottom-left-radius: 0.5rem;
+                border-top-left-radius: var(--border-radius);
+                border-bottom-left-radius: var(--border-radius);
             }
 
             &:last-child {
-                border-top-right-radius: 0.5rem;
-                border-bottom-right-radius: 0.5rem;
+                border-top-right-radius: var(--border-radius);
+                border-bottom-right-radius: var(--border-radius);
             }
         }
     }
@@ -102,15 +109,16 @@ main {
     }
 
     hr {
-        border: 0.0625rem solid var(--tone-line);
+        border: calc(var(--border-width) / 2) solid var(--tone-line);
+        border-radius: var(--border-radius);
         margin: 3rem auto;
         width: 20%;
     }
 
     pre {
         background-color: var(--tone-back);
-        border: 0.125rem solid var(--tone-line);
-        border-radius: 0.5rem;
+        border: var(--border-width) solid var(--tone-line);
+        border-radius: var(--border-radius);
         line-height: 1.8rem;
         padding: 1rem;
     }
