@@ -7,11 +7,15 @@
     {{ $paginator := .Paginate $pages.ByDate.Reverse }}
     {{ $options := dict "page" . "format" "terse" }}
 
-    {{ range $paginator.Pages }}
+    {{ range $index, $page := $paginator.Pages }}
         <article>
-            {{ partial "post-header.html" . }}
-            {{ partial "post-body.html"   . }}
+            {{ partial "post-header.html" $page }}
+            {{ partial "post-body.html"   $page }}
         </article>
+
+        {{ if ne $index (sub (len $paginator.Pages) 1) }}
+            <hr>
+        {{ end }}
     {{ end }}
 
     <div>
