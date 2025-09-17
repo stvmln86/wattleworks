@@ -9,6 +9,7 @@
     --tone-back: light-dark(#fdf8f4, #2a2420);
     --tone-fore: light-dark(#877, #baa);
     --tone-line: light-dark(#cba, #655);
+    --tone-flip: light-dark(var(--tone-fore), var(--tone-line));
 
     --border-radius: 0.5rem;
     --border-width: 0.125rem;
@@ -72,11 +73,11 @@ header {
 
         a {
             display: block;
-        }
 
-        a.here {
-            color: var(--tone-fore);
-            text-decoration: none;
+            &.here {
+                color: var(--tone-flip);
+                text-decoration: none;
+            }
         }
 
         li {
