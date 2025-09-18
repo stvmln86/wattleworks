@@ -15,11 +15,6 @@ path = "page"
 
 [params]
 description = "A journal of urban Australian haiku by Stephen Malone."
-
-footer = """
-© Stephen Malone 2025. Powered by [Hugo](https://gohugo.io).
-"""
-
 navigation = [
     ["home",    "/"],
     ["about",   "/pages/about/"],
