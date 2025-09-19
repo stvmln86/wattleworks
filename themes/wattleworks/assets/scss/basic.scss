@@ -21,7 +21,7 @@ code {
     font-family: Figtree, sans-serif;
     font-size: 18px;
     font-weight: normal;
-    line-height: 1.6em;
+    line-height: 1.5em;
 }
 
 body {
@@ -68,15 +68,20 @@ header {
         column-gap: calc(var(--border-width) * 2);
         display: flex;
         justify-content: space-between;
+        line-height: 2rem;
         list-style-type: none;
         padding-left: 0;
 
         a {
             display: block;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--main-fore);
+            }
 
             &.here {
                 color: var(--tone-flip);
-                text-decoration: none;
             }
         }
 
