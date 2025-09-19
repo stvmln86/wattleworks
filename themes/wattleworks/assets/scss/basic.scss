@@ -18,7 +18,8 @@
 html,
 pre,
 code {
-    font-family: Figtree, sans-serif;
+    font-family:
+        Avenir, Montserrat, Corbel, "URW Gothic", source-sans-pro, sans-serif;
     font-size: 18px;
     font-weight: normal;
     line-height: 1.6em;
@@ -60,7 +61,7 @@ header {
     text-align: center;
 
     h1 {
-        font-weight: 900;
+        /* font-weight: 900; */
         margin: 0;
     }
 
