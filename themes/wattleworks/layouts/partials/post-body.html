@@ -1,3 +1,4 @@
-<div>
+{{ $tone := index .Params.tags 2 }}
+<div class="post-{{ $tone }}">
     {{ .Content }}
 </div>

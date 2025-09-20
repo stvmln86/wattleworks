@@ -1,0 +1,52 @@
+:root {
+    --tone-black: light-dark(#aaa, #555);
+    --tone-blue: light-dark(#ace, #579);
+    --tone-brown: light-dark(#ca9, #752);
+    --tone-green: light-dark(#aca, #597);
+    --tone-orange: light-dark(#eca, #975);
+    --tone-pink: light-dark(#eac, #975);
+    --tone-purple: light-dark(#cae, #759);
+    --tone-red: light-dark(#eaa, #957);
+    --tone-teal: light-dark(#ace, #597);
+    --tone-yellow: light-dark(#eea, #997);
+}
+
+.post-black pre {
+    border-color: var(--tone-black);
+}
+
+.post-blue pre {
+    border-color: var(--tone-blue);
+}
+
+.post-brown pre {
+    border-color: var(--tone-brown);
+}
+
+.post-green pre {
+    border-color: var(--tone-green);
+}
+
+.post-orange pre {
+    border-color: var(--tone-orange);
+}
+
+.post-pink pre {
+    border-color: var(--tone-pink);
+}
+
+.post-purple pre {
+    border-color: var(--tone-purple);
+}
+
+.post-red pre {
+    border-color: var(--tone-red);
+}
+
+.post-teal pre {
+    border-color: var(--tone-teal);
+}
+
+.post-yellow pre {
+    border-color: var(--tone-yellow);
+}
