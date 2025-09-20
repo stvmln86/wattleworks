@@ -12,7 +12,7 @@
             {{ .Publish }}
         {{ end }}
 
-        {{ with resources.Match "scss/*" | resources.Concat "style.css" | toCSS | fingerprint }}
+        {{ with resources.Match "css/*.css" | resources.Concat "style.css" | fingerprint }}
             <link rel="preload" href="{{ .RelPermalink }}" as="style">
             <link rel="stylesheet" href="{{ .RelPermalink }}">
         {{ end }}
