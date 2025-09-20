@@ -1,3 +1,26 @@
+@media screen and (max-width: 450px) {
+    .desktop {
+        display: none;
+    }
+
+    html,
+    pre code {
+        font-size: 16px;
+    }
+
+    header nav ul {
+        background-color: var(--tone-back);
+        border: var(--border-width) solid var(--tone-line);
+        border-left-width: calc(4 * var(--border-width));
+        border-right-width: calc(4 * var(--border-width));
+
+        li {
+            background-color: inherit;
+            border: none;
+        }
+    }
+}
+
 @media screen and (max-width: 600px) {
     .desktop {
         display: none;
